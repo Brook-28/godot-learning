@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cjnby5ro5ffra"]
+
+[ext_resource type="Script" uid="uid://cxa47i1th5a88" path="res://label.gd" id="1_wtcfe"]
+
+[sub_resource type="GDScript" id="GDScript_wtcfe"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+
+	pass
+"
+
+[node name="Node2D" type="Node2D" unique_id=647120834]
+script = SubResource("GDScript_wtcfe")
+
+[node name="Label" type="Label" parent="." unique_id=856460403]
+offset_left = 369.0
+offset_top = 213.0
+offset_right = 648.0
+offset_bottom = 413.0
+text = "Hi, this is an array sorter program"
+script = ExtResource("1_wtcfe")
