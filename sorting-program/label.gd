@@ -1,5 +1,7 @@
 extends Label
 
+
+# array sorting function
 func array_sort(numbers) -> Array:
 	
 	var swapped = true
@@ -28,10 +30,14 @@ func array_sort(numbers) -> Array:
 var time_passed = 0.0
 
 func _process(delta: float) -> void:
+	
+# time control
 	time_passed += delta
 	
 	if time_passed >= 6.0:
 		time_passed = 0.0
+		
+		# random list generator
 		var numbers = []
 		for i in range(20):
 			numbers.append(randi() % 100)
@@ -39,4 +45,5 @@ func _process(delta: float) -> void:
 		var result = array_sort(numbers.duplicate())
 		print("The sorted list is ", result)
 		
+		# sorted and random list to lable
 		text = "Random: " + str(numbers) + "\nSorted: " + str(result)
